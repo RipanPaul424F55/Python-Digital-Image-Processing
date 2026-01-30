@@ -1,0 +1,11 @@
+import cv2
+x=cv2.imread("L.jpg")
+img_clk_90=cv2.rotate(x,cv2.ROTATE_90_CLOCKWISE)
+img_anticlk_90=cv2.rotate(x,cv2.ROTATE_90_COUNTERCLOCKWISE)
+img_clk_180=cv2.rotate(x,cv2.ROTATE_180)
+cv2.imshow("original",x)
+cv2.imshow("90º clockwise",img_clk_90)
+cv2.imshow("90º counter clockwise",img_anticlk_90)
+cv2.imshow("180º clockwise",img_clk_180)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
